@@ -1,0 +1,24 @@
+# userdb.example
+# Format:
+# username:x:password
+#
+# ! means a denied/failed password rule.
+# * means wildcard.
+# Rule order matters.
+
+admin:x:!admin
+admin:x:!123456
+admin:x:admin123
+
+root:x:!root
+root:x:!toor
+root:x:password
+
+ubuntu:x:!ubuntu
+ubuntu:x:ubuntu123
+
+backup:x:backup123
+test:x:test123
+
+# Any username with this password succeeds:
+*:x:admin123

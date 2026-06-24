@@ -1,0 +1,18 @@
+# cowrie.cfg.example
+# Sanitized example for Cowrie proxy mode.
+# Do not commit real backend passwords.
+
+[honeypot]
+backend = proxy
+
+[ssh]
+# Final lab setup used port 22 for realism.
+# This requires authbind when Cowrie runs as non-root.
+listen_endpoints = tcp:22:interface=0.0.0.0
+
+[proxy]
+backend = simple
+backend_ssh_host = 10.50.0.30
+backend_ssh_port = 22
+backend_user = backendcowrie
+backend_pass = CHANGE_ME

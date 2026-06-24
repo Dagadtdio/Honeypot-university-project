@@ -1,0 +1,11 @@
+# Backend VM netplan example
+network:
+  version: 2
+  ethernets:
+    ens18:
+      dhcp4: false
+      optional: true
+    ens19:
+      addresses:
+        - 10.50.0.30/24
+      dhcp4: false
